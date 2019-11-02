@@ -1,16 +1,36 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import RegistroFormulario from "../componentes/RegistroFormulario";
 import CargandoPagina from "../componentes/CargandoPagina";
 
 class Registro extends Component {
   state = {
     loading: true,
-    error: null
+    error: null,
+    form: {
+      nombre: "",
+      apellidos: "",
+      correo: "",
+      contrasena: "",
+      telefono: ""
+    }
+  };
+
+  handleChange = e => {
+    /*  const nextForm = this.state.form;
+    nextForm[e.target.name] = e.target.value; */
+
+    this.setState({
+      /*   form: nextForm */
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
+    });
   };
 
   handleSubmit = async e => {
     e.preventDefault();
+    console.log(this.state.form);
   };
 
   componentDidMount() {
@@ -28,7 +48,11 @@ class Registro extends Component {
             <h3 className="">Nombre App</h3>
             <h5>Registrate</h5>
           </div>
-          <RegistroFormulario onSubmit={this.handleSubmit} />
+          <RegistroFormulario
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+            formValues={this.state.form}
+          />
         </div>
       </div>
     );

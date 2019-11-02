@@ -1,10 +1,29 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import IniciarSesionFormulario from "../componentes/IniciarSesionFormulario";
 
 class InicioSesion extends Component {
+  state = {
+    loading: true,
+    error: null,
+    form: {
+      correo: "",
+      contrasena: ""
+    }
+  };
+
+  handleChange = e => {
+    this.setState({
+      /*   form: nextForm */
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
+    });
+  };
+
   handleSubmit = async e => {
     e.preventDefault();
+    console.log(this.state.form);
   };
   render() {
     return (
@@ -15,7 +34,11 @@ class InicioSesion extends Component {
             <h3>Nombre App</h3>
             <h5>Inicio de sesion</h5>
           </div>
-          <IniciarSesionFormulario onSubmit={this.handleSubmit} />
+          <IniciarSesionFormulario
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+            formValues={this.state.form}
+          />
         </div>
       </div>
     );

@@ -11,11 +11,13 @@ class RegistroFormulario extends Component {
     return (
       <div className="row d-flex justify-content-center">
         <form className="col-11 col-lg-6" onSubmit={this.props.onSubmit}>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="text"
               className="form-control"
               placeholder="Ingresa nombre"
+              name="nombre"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group">
@@ -23,6 +25,8 @@ class RegistroFormulario extends Component {
               type="text"
               className="form-control"
               placeholder="Ingresa apellidos"
+              name="apellidos"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group">
@@ -30,6 +34,8 @@ class RegistroFormulario extends Component {
               type="email"
               className="form-control"
               placeholder="Ingresa correo"
+              name="correo"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group">
@@ -37,6 +43,8 @@ class RegistroFormulario extends Component {
               type="password"
               className="form-control"
               placeholder="Ingresa contraseña"
+              name="contrasena"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group">
@@ -44,6 +52,8 @@ class RegistroFormulario extends Component {
               type="text"
               className="form-control"
               placeholder="Ingresa telefono"
+              name="telefono"
+              onChange={this.props.onChange}
             />
           </div>
 

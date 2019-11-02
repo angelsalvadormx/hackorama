@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class IniciarSesionFormulario extends Component {
   state = {};
@@ -11,25 +12,26 @@ class IniciarSesionFormulario extends Component {
     return (
       <div className="row d-flex justify-content-center">
         <form className="col-11 col-lg-6" onSubmit={this.props.onSubmit}>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="email"
               className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              name="correo"
               placeholder="Ingresa correo"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group">
             <input
               type="password"
               className="form-control"
-              id="exampleInputPassword1"
+              name="contrasena"
               placeholder="Ingresa contraseña"
+              onChange={this.props.onChange}
             />
           </div>
           <div className="form-group d-flex flex-column align-items-end">
-            <label>Recuperar cuenta</label>
+            <Link to="/recuperar-cuenta">Recuperar cuenta</Link>
           </div>
           <div className="form-group">
             <button

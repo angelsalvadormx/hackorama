@@ -15,31 +15,29 @@ import Publicacion from "./paginas/Publicacion";
 import AgregarPublicacionMenu from "./paginas/AgregarPublicacionMenu";
 import AgregarPublicacionFormulario from "./paginas/AgregarPublicacionFormulario";
 import Perfil from "./paginas/Perfil";
+import NoEncontrada from "./paginas/NoEncontrada";
 
 function App() {
   return (
     <BrowserRouter>
-        <Switch>
-          <Route exac path="/index" component={Principal} />
-          <Route exac path="/inicio-sesion" component={InicioSesion} />
-          <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
-          <Route exac path="/registro" component={Registro} />
-          <Route exac path="/inicio" component={Inicio} />
-          <Route exac path="/comparacion" component={ComparacionMascotas} />
-          <Route exac path="/publicaciones" component={Publicaciones} />
-          <Route exac path="/publicacion/:id" component={Publicacion} />
-          <Route
-            exac
-            path="/agregar-publicacion"
-            component={AgregarPublicacionMenu}
-          />
-          <Route
-            exac
-            path="/agregar-publicacion/:id"
-            component={AgregarPublicacionFormulario}
-          />
-          <Route exac path="/perfil/:id" component={Perfil} />
-        </Switch>
+      <Switch>
+        <Route exac path="/index" component={Principal} />
+        <Route exac path="/inicio-sesion" component={InicioSesion} />
+        <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
+        <Route exac path="/registro" component={Registro} />
+        <Route exac path="/inicio" component={Inicio} />
+        <Route exac path="/comparacion" component={ComparacionMascotas} />
+        <Route exac path="/publicaciones" component={Publicaciones} />
+        <Route exac path="/publicacion/:id" component={Publicacion} />
+        <Route exac path="/publicacion/:id" component={Publicacion} />
+        <Route component={NoEncontrada} />
+        <Route
+          exac
+          path="/agregar-publicacion/:id"
+          component={AgregarPublicacionFormulario}
+        />
+        <Route exac path="/perfil/:id" component={Perfil} />
+      </Switch>
     </BrowserRouter>
   );
 }
