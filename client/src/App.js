@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-// Paginas
+//  import Paginas
 import Principal from './paginas/Principal';
 import InicioSesion from './paginas/InicioSesion';
 import RecuperarCuenta from './paginas/RecuperarCuenta';
@@ -22,6 +22,7 @@ function App() {
   
   return (
     <BrowserRouter>
+      <Encabezado/>
       <Switch>
         <Route exac path="/" component={Principal} />
         <Route exac path="/inicio-sesion" component={InicioSesion} />
