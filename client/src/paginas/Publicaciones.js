@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // Import componentes
 import Menu from '../componentes/Menu';
 import Encabezado from '../componentes/Encabezado';
+import Mapa from '../componentes/Mapa';
 
 const Publicaciones = () => {
   const json = [
