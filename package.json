@@ -14,7 +14,11 @@
     "mongoose": "^5.7.7",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
-    "passport-local-mongoose": "^5.0.1"
+    "passport-local-mongoose": "^5.0.1",
+    "pigeon-maps": "^0.14.0",
+    "pigeon-marker": "^0.3.4",
+    "pigeon-overlay": "^0.2.3",
+    "react-leaflet": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
