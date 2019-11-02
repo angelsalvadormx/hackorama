@@ -1,9 +1,25 @@
 import React from 'react';
+import M from 'materialize-css';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+// Paginas
+import Principal from './paginas/Principal';
+import InicioSesion from './paginas/InicioSesion';
+import RecuperarCuenta from './paginas/RecuperarCuenta';
+import Registro from './paginas/Registro';
+import Inicio from './paginas/Inicio';
+import ComparacionMascotas from './paginas/ComparacionMascotas';
+import Publicaciones from './paginas/Publicaciones';
+import Publicacion from './paginas/Publicacion';
+import AgregarPublicacionMenu from './paginas/AgregarPublicacionMenu';
+import AgregarPublicacionFormulario from './paginas/AgregarPublicacionFormulario';
+import Perfil from './paginas/Perfil';
+
 function App() {
+    M.AutoInit();
+  
   return (
     <BrowserRouter>
       <Switch>
