@@ -22,9 +22,8 @@ function App() {
   
   return (
     <BrowserRouter>
-      <Encabezado/>
       <Switch>
-        <Route exac path="/" component={Principal} />
+        <Route exac path="/index" component={Principal} />
         <Route exac path="/inicio-sesion" component={InicioSesion} />
         <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
         <Route exac path="/registro" component={Registro} />
