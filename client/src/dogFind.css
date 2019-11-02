@@ -31,9 +31,19 @@ body,
   width: 40% !important;
 }
 
-.btn-grey {
+.btn-gray {
   background: #f4f4f4;
 }
 .margin_center{
   margin: 0 auto;
+}
+.btn-file{
+ overflow: hidden;
+}
+.btn-file > input{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
 }

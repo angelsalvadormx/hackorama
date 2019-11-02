@@ -8,15 +8,15 @@ const AgregarPublicacionMenu = () => {
         <h3>Reportar</h3>
       </header>
       <main className="h-100 d-flex align-items-center justify-content-center flex-column">
-        <Link to="/agregar-publicacion/1" className="mb-3 w-50 btn btn-grey btn-lg">
+        <Link to="/agregar-publicacion/1" className="mb-3 w-50 btn btn-gray btn-lg">
           <i className="fas fa-paw"></i>
           <small className="w-100 d-block text-dark">Perdido</small>
         </Link>
-        <Link to="/agregar-publicacion/2" className="mb-3 w-50 btn btn-grey btn-lg">
+        <Link to="/agregar-publicacion/2" className="mb-3 w-50 btn btn-gray btn-lg">
           <i className="fas fa-paw"></i>
           <small className="w-100 d-block text-dark">Rescatados</small>
         </Link>
-        <Link to="/agregar-publicacion/3" className="w-50 btn btn-grey btn-lg">
+        <Link to="/agregar-publicacion/3" className="w-50 btn btn-gray btn-lg">
           <i className="fas fa-paw"></i>
           <small className="w-100 d-block text-dark">Sin hogar</small>
         </Link>
