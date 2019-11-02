@@ -5,9 +5,11 @@ export default class Principal extends Component {
   render() {
     return (
       <div>
-        <div className="container h-100 bg-dark">
-          <div>logo</div>
-          <h1 className="d-flex justify-content-center">Nombre App</h1>
+        <div className="container h-100 bg-dar">
+          <div className="d-flex flex-column align-items-center">
+            <h1>Logo</h1>
+            <h3>Nombre App</h3>
+          </div>
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-lg-6">
               <div className="form-group">
