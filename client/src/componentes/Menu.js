@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 
 const menu = () => {
   return (
-    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-lg fixed-bottom navbar-light bg-light">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <Link to="/productos" className="nav-item nav-link active"><i class="fas fa-map-marker-alt"></i></Link>
-          <Link to="/productos" className="nav-item nav-link">Buscador</Link>
+      <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
+        <div className="navbar-nav">
+          <Link to="/inicio" className="nav-item nav-link active"><i className="fas fa-map-marked-alt"></i></Link>
+          <Link to="/comparacion" className="nav-item nav-link"><i className="fas fa-search-location"></i></Link>
+          <Link to="/productos" className="nav-item nav-link"><i className="far fa-newspaper"></i></Link>
+          <Link to="/productos" className="nav-item nav-link"><i className="fas fa-user-circle"></i></Link>
         </div>
       </div>
     </nav>
