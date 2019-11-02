@@ -29,13 +29,13 @@ function App() {
         <Route exac path="/comparacion" component={ComparacionMascotas} />
         <Route exac path="/publicaciones" component={Publicaciones} />
         <Route exac path="/publicacion/:id" component={Publicacion} />
-        <Route component={NoEncontrada} />
         <Route
           exac
           path="/agregar-publicacion/:id"
           component={AgregarPublicacionFormulario}
         />
         <Route exac path="/perfil/:id" component={Perfil} />
+        <Route component={NoEncontrada} />
       </Switch>
     </BrowserRouter>
   );
