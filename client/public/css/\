@@ -1,0 +1,9 @@
+.btn-primary{
+	border-radius: 10px;
+  background-color: #3d5afe;
+  color: #fff;
+	text-align:center;
+	padding: 15px 18px;
+  width: auto !important;
+  height: 47px;
+}
