@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// active -->
 
 const Encabezado = () => {
   return (
@@ -9,15 +9,15 @@ const Encabezado = () => {
         <button className="outline-none pl-0 pr-0 navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <h2>Find Me</h2>  
+        <h2>Find Me</h2>
         <Link to="/agregar-publicacion-menu" className="text-dark"><i className="fas fa-plus"></i></Link>
-      </nav>
-      <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
-        <div className=" p-4">
-          <h5 className="text-white h4">Collapsed content</h5>
-          <span className="text-muted">Toggleable via the navbar brand.</span>
+        <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
+          <div class="navbar-nav pb-3">
+            <a class="nav-item nav-link " href="/perfil/"><i class="fas fa-cog"></i> Perfil</a>
+            <a class="nav-item nav-link" href="#"> <i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };
