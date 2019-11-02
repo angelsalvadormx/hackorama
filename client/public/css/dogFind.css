@@ -41,3 +41,14 @@ a:hover {
 	color: #fff;
   background-color: #00bfa5;
 }
+.bkg-img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.h-250{
+  height: 250px;
+}
+.w-45{
+  width: 45%!important;
+}
