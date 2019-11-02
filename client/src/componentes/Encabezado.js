@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Encabezado = () => {
+
+const Encabezado = (props) => {
+  const btn = props.hasOwnProperty('agregar') ? <Link to="agregar-publicacion" className="text-dark"><i class="fas fa-plus"></i></Link>: props.hasOwnProperty('cerrar') ? <Link to="agregar-publicacion" className="text-dark"><i class="fas fa-times"></i></Link> : '';
   return (
     <div className="pos-f-t">
       <nav className="navbar navbar-light">
@@ -8,7 +11,7 @@ const Encabezado = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <h2>Find Me</h2>  
-        <i class="fas fa-plus"></i>
+        {btn}
       </nav>
       <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
         <div className=" p-4">

@@ -5,9 +5,18 @@
 .outline-none{
   outline: none !important;
 }
-picture{
-  display: block !important;
-}
 .bkg-img{
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.ht-100{
+  height: 100px !important;
+}
+.rounded-10{
+  border-radius: 10px;
+}
+.text-sm{
+  font-size: 0.9rem !important;
 }
