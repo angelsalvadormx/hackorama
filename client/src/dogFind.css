@@ -34,3 +34,6 @@ body,
 .btn-grey {
   background: #f4f4f4;
 }
+.margin_center{
+  margin: 0 auto;
+}
