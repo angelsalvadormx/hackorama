@@ -19,27 +19,29 @@ import Perfil from "./paginas/Perfil";
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exac path="/index" component={Principal} />
-        <Route exac path="/inicio-sesion" component={InicioSesion} />
-        <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
-        <Route exac path="/registro" component={Registro} />
-        <Route exac path="/inicio" component={Inicio} />
-        <Route exac path="/comparacion" component={ComparacionMascotas} />
-        <Route exac path="/publicaciones" component={Publicaciones} />
-        <Route exac path="/publicacion/:id" component={Publicacion} />
-        <Route
-          exac
-          path="/agregar-publicacion"
-          component={AgregarPublicacionMenu}
-        />
-        <Route
-          exac
-          path="/agregar-publicacion/:id"
-          component={AgregarPublicacionFormulario}
-        />
-        <Route exac path="/perfil/:id" component={Perfil} />
-      </Switch>
+      <main className="container-fluid">
+        <Switch>
+          <Route exac path="/index" component={Principal} />
+          <Route exac path="/inicio-sesion" component={InicioSesion} />
+          <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
+          <Route exac path="/registro" component={Registro} />
+          <Route exac path="/inicio" component={Inicio} />
+          <Route exac path="/comparacion" component={ComparacionMascotas} />
+          <Route exac path="/publicaciones" component={Publicaciones} />
+          <Route exac path="/publicacion/:id" component={Publicacion} />
+          <Route
+            exac
+            path="/agregar-publicacion"
+            component={AgregarPublicacionMenu}
+          />
+          <Route
+            exac
+            path="/agregar-publicacion/:id"
+            component={AgregarPublicacionFormulario}
+          />
+          <Route exac path="/perfil/:id" component={Perfil} />
+        </Switch>
+      </main>
     </BrowserRouter>
   );
 }
