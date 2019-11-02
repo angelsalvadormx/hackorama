@@ -36,7 +36,7 @@ function App() {
         />
         <Route
           exac
-          path="/agregar-publicacion-menu/:id"
+          path="/agregar-publicacion-menu"
           component={AgregarPublicacionMenu}
         />
         <Route exac path="/perfil/:id" component={Perfil} />

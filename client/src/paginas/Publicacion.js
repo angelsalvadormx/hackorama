@@ -35,7 +35,7 @@ class Publicaciones extends Component {
             <strong className=" mr-1 d-block">Descripción</strong>
             <label className="d-block mb-1"> <small className="text-muted">{publicacion.descripcion}</small></label>
           </main>
-
+          <strong className="mt-3">Lugar de desaparición</strong>
           <button className="btn btn-primary mt-4 absolute-bottom ">Reclamar</button>
         </section>
       </Fragment>
