@@ -37,7 +37,7 @@ module.exports = {
 		const user = new User({
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
-			email: req.body.email,
+			username: req.body.email,
 			phone: req.body.email,
 			password: req.body.password,
 			profileImage: req.body.profileImage
@@ -63,7 +63,7 @@ module.exports = {
     const newuser = {
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
-			email: req.body.email,
+			username: req.body.email,
 			phone: req.body.email,
 			password: req.body.password,
 			profileImage: req.body.profileImage

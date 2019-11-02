@@ -34,17 +34,27 @@ module.exports = {
 
   save: (req, res) => {
     const post = new Post({
-      _idPet: req.body.idPet,
-      _idUser: req.body.idUser,
+      creation_datetime: req.body.creation_datetime,
+      lost_datetime: req.body.lost_datetime,
+      idUser: req.body.idUser,
       postType: req.body.postType,
-      location: {
-        lat: req.body.lat,
-        lon: req.body.lon
-      },
+      location: req.body.location,
       status: req.body.status,
-      description: req.body.description
-    });
-
+      description: req.body.description,
+      pet: {
+        name: req.body.pet.name,
+        breed: req.body.pet.breed,
+        color: req.body.pet.color,
+        age: req.body.pet.age,
+        gender: req.body.pet.gender,
+        address: req.body.pet.address,
+        description: req.body.pet.description,
+        images: req.body.pet.images
+      },
+      owner: req.body.owner,
+      rescuer: req.body.rescuer,
+      claimants: req.body.claimants
+    })
     post.save((err, result) => {
       if (err) {
         res
@@ -63,15 +73,26 @@ module.exports = {
     const id = req.params.id;
 
     const newPost = {
-      _idPet: req.body.idPet,
-      _idUser: req.body.idUser,
+      creation_datetime: req.body.creation_datetime,
+      lost_datetime: req.body.lost_datetime,
+      idUser: req.body.idUser,
       postType: req.body.postType,
-      location: {
-        lat: req.body.lat,
-        lon: req.body.lon
-      },
+      location: req.body.location,
       status: req.body.status,
-      description: req.body.description
+      description: req.body.description,
+      pet: {
+        name: req.body.pet.name,
+        breed: req.body.pet.breed,
+        color: req.body.pet.color,
+        age: req.body.pet.age,
+        gender: req.body.pet.gender,
+        address: req.body.pet.address,
+        description: req.body.pet.description,
+        images: req.body.pet.images
+      },
+      owner: req.body.owner,
+      rescuer: req.body.rescuer,
+      claimants: req.body.claimants
     };
 
     Post.findByIdAndUpdate({ _id: id }, { $set: newPost }, (err, result) => {
