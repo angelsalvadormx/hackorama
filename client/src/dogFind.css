@@ -1,28 +1,36 @@
-
-.active-menu{
-  color: #FF1A1A  !important;
+html,
+body,
+#root {
+  height: 100%;
 }
-.outline-none{
+.active-menu {
+  color: #ff1a1a !important;
+}
+.outline-none {
   outline: none !important;
 }
-.bkg-img{
+.bkg-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.ht-100{
+.ht-100 {
   height: 100px !important;
 }
-.rounded-10{
+.rounded-10 {
   border-radius: 10px;
 }
-.text-sm{
+.text-sm {
   font-size: 0.9rem !important;
 }
-.text-xsm{
+.text-xsm {
   font-size: 0.7rem !important;
 }
-.w-40{
+.w-40 {
   width: 40% !important;
+}
+
+.btn-grey {
+  background: #f4f4f4;
 }
