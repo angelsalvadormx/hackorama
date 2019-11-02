@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 const AgregarPublicacionMenu = () => {
   return (
     <Fragment>
+      <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
+        <Link to="/publicaciones" ><i className="text-dark fas fa-times"></i></Link>
+      </nav>
       <header className="position-fixed w-100 text-center pt-5 pb-5">
         <h3>Reportar</h3>
       </header>

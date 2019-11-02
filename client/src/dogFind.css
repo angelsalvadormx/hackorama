@@ -3,6 +3,7 @@ body,
 #root {
   height: 100%;
 }
+.active-menu small,
 .active-menu {
   color: #ff1a1a !important;
 }
@@ -30,7 +31,6 @@ body,
 .w-40 {
   width: 40% !important;
 }
-
 .btn-gray {
   background: #f4f4f4;
 }

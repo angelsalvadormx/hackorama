@@ -15,7 +15,7 @@ const menu = () => {
         </Link>
         <Link to="/productos" className="text-dark text-center">
           <i className="fas fa-paw"></i>
-          <small className="w-100 d-block">Rescatados</small>
+          <small className="w-100 d-block">Sin hogar</small>
         </Link>
       </div>
     </nav>
