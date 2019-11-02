@@ -2,34 +2,29 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const connection = "mongodb://localhost/test";
-mongoose.connect(connection);
+const connection = "mongodb://localhost/findog";
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect(connection, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-
-const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')
-
+const Router = require('./routes/');
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
+//middlewares
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-
+app.use('/v1/findog/user', Router.userResource);
+app.use('/v1/findog/pet', Router.petResource);
+app.use('/v1/findog/post', Router.postResource);
 
 
 // catch 404 and forward to error handler
@@ -45,7 +40,6 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
 });
 
 module.exports = app;
