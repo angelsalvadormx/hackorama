@@ -16,11 +16,13 @@ import AgregarPublicacionMenu from "./paginas/AgregarPublicacionMenu";
 import AgregarPublicacionFormulario from "./paginas/AgregarPublicacionFormulario";
 import Perfil from "./paginas/Perfil";
 import NoEncontrada from "./paginas/NoEncontrada";
+import Mapa from './componentes/Mapa';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Route exac path="/mapa" component={Mapa} />
         <Route exac path="/index" component={Principal} />
         <Route exac path="/inicio-sesion" component={InicioSesion} />
         <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
@@ -36,7 +38,7 @@ function App() {
         />
         <Route
           exac
-          path="/agregar-publicacion-menu/:id"
+          path="/agregar-publicacion-menu"
           component={AgregarPublicacionMenu}
         />
         <Route exac path="/perfil/:id" component={Perfil} />

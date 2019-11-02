@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default class Principal extends Component {
   render() {
     return (
-      <div>
-        <div className="container h-100 bg-dar">
-          <div className="d-flex flex-column align-items-center">
+      <div className="h-100 bg-dark">
+        <div className="container h-100 bg-success">
+          <div className="d-flex flex-column align-items-center h-70 bg-danger">
             <h1>Logo</h1>
             <h3>Nombre App</h3>
           </div>
@@ -21,7 +21,7 @@ export default class Principal extends Component {
                 </Link>
               </div>
               <div className="form-group">
-                <Link to="/registro" className="btn btn-secondary btn-block">
+                <Link to="/registro" className="btn btn-grey btn-block">
                   Crear Cuenta
                 </Link>
               </div>

@@ -10,7 +10,7 @@ const Encabezado = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <h2>Find Me</h2>  
-        <Link to="agregar-publicacion" className="text-dark"><i className="fas fa-plus"></i></Link>
+        <Link to="/agregar-publicacion-menu" className="text-dark"><i className="fas fa-plus"></i></Link>
       </nav>
       <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
         <div className=" p-4">

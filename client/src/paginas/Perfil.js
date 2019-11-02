@@ -91,7 +91,7 @@ class Perfil extends Component {
             <div className="form-group">
               <button
                 onClick={this.handleClick}
-                className="btn btn-secondary btn-block"
+                className="btn btn-primary btn-block"
               >
                 Actualizar
               </button>
