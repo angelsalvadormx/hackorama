@@ -20,3 +20,9 @@
 .text-sm{
   font-size: 0.9rem !important;
 }
+.text-xsm{
+  font-size: 0.7rem !important;
+}
+.w-40{
+  width: 40% !important;
+}

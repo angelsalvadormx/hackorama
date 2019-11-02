@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // Import componentes
 import Menu from '../componentes/Menu';
-import Titulo from '../componentes/Titulo';
 import Encabezado from '../componentes/Encabezado';
 
 const ComparacionMAscotas = () => {
@@ -17,7 +16,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 2,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -26,7 +25,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 3,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -35,7 +34,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 4,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -44,7 +43,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 5,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -53,7 +52,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 6,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -62,7 +61,7 @@ const ComparacionMAscotas = () => {
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },
     {
-      "id": 1,
+      "id": 7,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",
@@ -70,7 +69,7 @@ const ComparacionMAscotas = () => {
       "descripcion": "AJKAJAJAJAJAJFASDFKASDKFKASDFKASKDFK",
       "imagen": "https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/12/visual-code-portada.png?fit=666%2C370&quality=100&strip=all&ssl=1"
     },    {
-      "id": 1,
+      "id": 8,
       "fecha": "23 oct 2019",
       "nombre": "Nombre",
       "raza": "Raza",

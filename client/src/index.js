@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import './dogFind.css';
 
 import * as serviceWorker from './serviceWorker';
 
