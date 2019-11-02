@@ -19,7 +19,6 @@ import Perfil from "./paginas/Perfil";
 function App() {
   return (
     <BrowserRouter>
-      <main className="container-fluid">
         <Switch>
           <Route exac path="/index" component={Principal} />
           <Route exac path="/inicio-sesion" component={InicioSesion} />
@@ -41,7 +40,6 @@ function App() {
           />
           <Route exac path="/perfil/:id" component={Perfil} />
         </Switch>
-      </main>
     </BrowserRouter>
   );
 }

@@ -1,54 +1,10 @@
-body{
-	color: #1a237e !important;
-}
-h1{
- font: 45px/1.31 'sofia-pro', sans-serif;
-}
-.green{
-	color: #00bfa5;
-}
-a{
-	text-decoration: none;
-}
-a:hover {
-    color: #3d5afe;
-}
-.btn-primary,
-.btn-success{
-	border-radius: 10px;
-	text-align:center;
-	padding: 15px 18px;
-  width: auto !important;
-  height: 47px;
-}
 
-.btn-primary{
-  background-color: #3d5afe;
-  color: #fff;
+.active-menu{
+  color: #FF1A1A  !important;
 }
-.btn-primary:hover{
-	background-color: #1a237e;
+.outline-none{
+  outline: none !important;
 }
-.btn-success{
-    border: 1px solid #00bfa5;
-    color: #00bfa5;
-    background-color: transparent;
-}
-.border-top{
-	 border-top: 1px solid rgba(61, 90, 254, 0.2);
-}
-.btn-success:hover{
-	color: #fff;
-  background-color: #00bfa5;
-}
-.bkg-img{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.h-250{
-  height: 250px;
-}
-.w-45{
-  width: 45%!important;
+picture{
+  display: block !important;
 }

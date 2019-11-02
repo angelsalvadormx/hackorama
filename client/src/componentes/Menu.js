@@ -3,17 +3,20 @@ import { Link } from 'react-router-dom';
 
 const menu = () => {
   return (
-    <nav className="navbar navbar-expand-sm fixed-bottom navbar-light bg-light">
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <Link to="/inicio" className="nav-item nav-link active"><i className="fas fa-map-marked-alt"></i></Link>
-          <Link to="/comparacion" className="nav-item nav-link"><i className="fas fa-search-location"></i></Link>
-          <Link to="/productos" className="nav-item nav-link"><i className="far fa-newspaper"></i></Link>
-          <Link to="/productos" className="nav-item nav-link"><i className="fas fa-user-circle"></i></Link>
-        </div>
+    <nav className="border-top pt-2 pb-2 fixed-bottom bg-light d-flex justify-content-center">
+      <div className="w-75 d-flex justify-content-between ">
+        <Link to="/inicio" className="active-menu text-center">
+          <i class="fas fa-paw"></i>
+          <small className="w-100 d-block text-dark">Perdidos</small>
+        </Link>
+        <Link to="/comparacion" className="text-dark text-center">
+          <i class="fas fa-paw"></i>
+          <small className="w-100 d-block">Rescatados</small>
+        </Link>
+        <Link to="/productos" className="text-dark text-center">
+          <i class="fas fa-paw"></i>
+          <small className="w-100 d-block">Rescatados</small>
+        </Link>
       </div>
     </nav>
   );
