@@ -28,8 +28,8 @@ class Perfil extends Component {
   handleChange = e => {
     this.setState({
       /*   form: nextForm */
-      form: {
-        ...this.state.form,
+      data: {
+        ...this.state.data,
         [e.target.name]: e.target.value
       }
     });
@@ -37,11 +37,11 @@ class Perfil extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    console.log(this.state.form);
+    console.log(this.state.data);
   };
 
   componentDidMount() {
-    this.fetchData();
+    // this.fetchData();
   }
 
   render() {

@@ -5,8 +5,6 @@ function Gravatar(props) {
   const correo = props.correo;
   const hash = md5(correo);
 
-  const style = {};
-
   return (
     <img
       style={{
