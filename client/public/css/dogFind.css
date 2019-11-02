@@ -8,3 +8,6 @@
 picture{
   display: block !important;
 }
+.bkg-img{
+  background-position: center;
+}
