@@ -45,7 +45,7 @@ class Perfil extends Component {
       <Fragment>
         <Encabezado />
         <div className="d-flex flex-column align-items-center">
-          <h5 className="mb-5">Mi perfil</h5>
+          <h5 className="mb-3">Mi perfil</h5>
           <Gravatar correo={data.correo} />
           <FormularioUsuario
             onChange={this.handleChange}

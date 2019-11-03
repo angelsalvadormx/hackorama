@@ -61,7 +61,9 @@ const FormularioUsuario = props => {
         />
       </div>
       <div className="form-group">
-        <button className="btn btn-primary btn-block">{props.message}</button>
+        <button className="rounded-10 btn btn-primary btn-block">
+          {props.message}
+        </button>
       </div>
     </form>
   );

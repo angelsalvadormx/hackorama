@@ -30,7 +30,9 @@ const IniciarSesionFormulario = props => {
           <Link to="/recuperar-cuenta">Recuperar cuenta</Link>
         </div>
         <div className="form-group">
-          <button className="btn btn-primary btn-block">Iniciar</button>
+          <button className="rounded-10 btn btn-primary btn-block">
+            Iniciar
+          </button>
         </div>
       </form>
     </div>

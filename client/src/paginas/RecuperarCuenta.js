@@ -55,7 +55,7 @@ class RecuperarCuenta extends Component {
               <div className="form-group">
                 <button
                   onClick={this.handleClick}
-                  className="btn btn-primary btn-block"
+                  className="rounded-10 btn btn-primary btn-block"
                 >
                   Enviar
                 </button>

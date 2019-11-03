@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
 import CargandoPagina from "../componentes/CargandoPagina";
 import FormularioUsuario from "../componentes/FormularioUsuario";
+import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
 
 class Registro extends Component {
   state = {
@@ -16,9 +18,6 @@ class Registro extends Component {
   };
 
   handleChange = e => {
-    /*  const nextForm = this.state.form;
-    nextForm[e.target.name] = e.target.value; */
-
     this.setState({
       /*   form: nextForm */
       form: {
@@ -41,19 +40,19 @@ class Registro extends Component {
       return <CargandoPagina />;
     }
     return (
-      <div className="pt-5">
-        <div className="container h-100 bg-dar">
-          <div className="d-flex flex-column align-items-center">
-            <h1>Logo</h1>
-            <h3 className="">Nombre App</h3>
-            <h5 className="mt-5">Registrate</h5>
+      <div className="container h-100">
+        <div className="row d-flex flex-column h-100">
+          <EncabezadoPrincipal />
+
+          <div className="d-flex flex-column align-items-center mt-5">
+            <h5>Registrate</h5>
+            <FormularioUsuario
+              onSubmit={this.handleSubmit}
+              onChange={this.handleChange}
+              formValues={this.state.form}
+              message="Registrarme"
+            />
           </div>
-          <FormularioUsuario
-            onSubmit={this.handleSubmit}
-            onChange={this.handleChange}
-            formValues={this.state.form}
-            message="Registrarme"
-          />
         </div>
       </div>
     );

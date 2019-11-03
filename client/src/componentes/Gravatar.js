@@ -10,8 +10,9 @@ function Gravatar(props) {
       style={{
         borderRadius: "50%",
         marginRight: "1rem",
-        width: "120px",
-        height: "120px"
+        marginBottom: "1rem",
+        width: "100px",
+        height: "100px"
       }}
       src={`https://www.gravatar.com/avatar/${hash}?d=identicon`}
       alt="Avatar"
