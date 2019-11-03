@@ -35,7 +35,7 @@ class InicioSesion extends Component {
       <div className="container h-100">
         <div className="row d-flex flex-column h-100">
           <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
-            <Link to="/index">
+            <Link to="/principal">
               <i className="text-dark fas fa-times"></i>
             </Link>
           </nav>

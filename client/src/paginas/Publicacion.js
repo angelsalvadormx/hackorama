@@ -20,6 +20,9 @@ class Publicaciones extends Component {
   async obtenerPublicacion(id_pub) {
     try {
       let respuesta = await api.getById('post', id_pub);
+      if(Object.entries(respuesta).length === 0){
+        this.props.history.push("/404");
+      }
       this.state.publicacion = respuesta;
       this.state.datosMapa.push({
         id: respuesta.id,

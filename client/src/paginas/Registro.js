@@ -56,7 +56,7 @@ class Registro extends Component {
       <div className="container">
         <div className="row d-flex flex-column">
           <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
-            <Link to="/index">
+            <Link to="/principal">
               <i className="text-dark fas fa-times"></i>
             </Link>
           </nav>

@@ -36,7 +36,6 @@ export default class Publicaciones extends Component {
         })
       });
       this.state.datosMapa = tmpDatosMapa 
-      console.log(this.state.datosMapa);
       
       setTimeout(()=>{
         this.setState({ loading: false });

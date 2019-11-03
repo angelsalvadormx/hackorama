@@ -29,7 +29,7 @@ const Encabezado = () => {
             <a className="nav-item nav-link " href="/perfil/">
             <i class="fas fa-user-circle"></i> Perfil
             </a>
-            <a className="nav-item nav-link" href="#">
+            <a className="nav-item nav-link" href="/principal">
               <i className="fas fa-sign-out-alt"></i> Cerrar sesión
             </a>
           </div>
