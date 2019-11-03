@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import IniciarSesionFormulario from "../componentes/IniciarSesionFormulario";
 import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
@@ -31,6 +32,11 @@ class InicioSesion extends Component {
     return (
       <div className="container h-100">
         <div className="row d-flex flex-column h-100">
+          <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
+            <Link to="/index">
+              <i className="text-dark fas fa-times"></i>
+            </Link>
+          </nav>
           <EncabezadoPrincipal />
           <IniciarSesionFormulario
             onSubmit={this.handleSubmit}

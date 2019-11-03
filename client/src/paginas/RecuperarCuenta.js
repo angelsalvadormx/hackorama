@@ -30,12 +30,12 @@ class RecuperarCuenta extends Component {
   render() {
     return (
       <div className="container">
-        <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
-          <Link to="/inicio-sesion">
-            <i className="text-dark fas fa-times"></i>
-          </Link>
-        </nav>
         <div className="row d-flex flex-column h-100">
+          <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
+            <Link to="/inicio-sesion">
+              <i className="text-dark fas fa-times"></i>
+            </Link>
+          </nav>
           <EncabezadoPrincipal />
 
           <div className="d-flex flex-column align-items-center mt-5">
