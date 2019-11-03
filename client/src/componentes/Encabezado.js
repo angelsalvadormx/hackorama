@@ -27,7 +27,7 @@ const Encabezado = () => {
         >
           <div className="navbar-nav pb-3">
             <a className="nav-item nav-link " href="/perfil/">
-              <i className="fas fa-cog"></i> Perfil
+            <i class="fas fa-user-circle"></i> Perfil
             </a>
             <a className="nav-item nav-link" href="#">
               {" "}

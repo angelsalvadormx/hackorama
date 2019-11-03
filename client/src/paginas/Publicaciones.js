@@ -89,7 +89,7 @@ const Publicaciones = () => {
     }
   ];
 
-  const todoItems = json.map((item, key) => (
+  const lista = json.map((item, key) => (
     <Link to={"/publicacion/" + item.id} key={key} className="w-45 ht-100 mb-3 d-block">
       <section className="shadow-lg p-2 bg-white w-100 rounded-10 d-flex h-100">
         <picture
@@ -112,9 +112,11 @@ const Publicaciones = () => {
   return (
     <React.Fragment>
       <Encabezado />
-      <main className="container pb-5">
-        <Mapa/>
-        <div className="w-100">{todoItems}</div>
+      <main className="container pb-5 mb-5">
+        <section id="sec-mapa" className="mb-3">
+          <Mapa/>
+        </section>
+        <div className="w-100">{lista}</div>
       </main>
       <Menu />
     </React.Fragment>

@@ -5,9 +5,7 @@ body,
 }
 
 /* Animacion de la clase active-menu*/
-.active-menu small,
-.active-menu {
-}
+
 .btn-menu{
   color: #000;
 }
@@ -67,4 +65,14 @@ body,
   bottom: 0;
   right: 0;
   opacity: 0;
+}
+
+
+/* Mapa */
+#sec-mapa{
+  overflow: hidden;
+}
+
+.zIndex3{
+  z-index: 3;
 }

@@ -7,7 +7,6 @@ import Cargador from './componentes/Cargador';
 //  import Paginas
 import Mapa from './componentes/Mapa';
 import Perfil from "./paginas/Perfil";
-import Inicio from "./paginas/Inicio";
 import Registro from "./paginas/Registro";
 import Principal from "./paginas/Principal";
 import Publicacion from "./paginas/Publicacion";
@@ -25,11 +24,9 @@ function App() {
       <Switch>
         <Route exac path="/mapa" component={Mapa} />
         <Route exac path="/loader" component={Cargador} />
-        <Route exac path="/index" component={Principal} />
         <Route exac path="/inicio-sesion" component={InicioSesion} />
         <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
         <Route exac path="/registro" component={Registro} />
-        <Route exac path="/inicio" component={Inicio} />
         <Route exac path="/comparacion" component={ComparacionMascotas} />
         <Route exac path="/publicaciones" component={Publicaciones} />
         <Route exac path="/publicacion/:id" component={Publicacion} />
@@ -44,6 +41,7 @@ function App() {
           component={AgregarPublicacionMenu}
         />
         <Route exac path="/perfil/:id" component={Perfil} />
+        <Route exac path="/" component={Principal} />
         <Route component={NoEncontrada} />
       </Switch>
     </BrowserRouter>
