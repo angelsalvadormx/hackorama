@@ -12,7 +12,8 @@ export default class Publicaciones extends Component {
   state = {
     loading: true,
     error: '',
-    lista: []
+    lista: [],
+    datosMapa:[]
   }
   constructor() {
     super();
@@ -21,8 +22,22 @@ export default class Publicaciones extends Component {
 
   async obtenerPublicaciones() {
     try {
-      this.state.lista = await api.list('post');
-      console.log(this.state.lista);
+      let respuesta = await api.list('post');
+      this.state.lista = respuesta;
+      let tmpDatosMapa = []
+      respuesta.forEach(item => {
+        tmpDatosMapa.push({
+          id: item.id,
+          img: item.pet.images[0],
+          location: [
+            item.location.lat,
+            item.location.lon,
+          ]
+        })
+      });
+      this.state.datosMapa = tmpDatosMapa 
+      console.log(this.state.datosMapa);
+      
       setTimeout(()=>{
         this.setState({ loading: false });
       },500)
@@ -41,7 +56,7 @@ export default class Publicaciones extends Component {
         <Encabezado />
         <main className="container pb-5 mb-5">
           <section id="sec-mapa" className="mb-3">
-            <Mapa />
+            <Mapa datosMapa={this.state.datosMapa}/>
           </section>
           <div className="w-100">
             {this.state.lista.map((item,key) => (
@@ -55,8 +70,8 @@ export default class Publicaciones extends Component {
                   <label className="h5 d-block mb-1">
                     <strong>{item.pet.name}</strong>
                   </label>
-                  <label className="h6 mb-2 d-block">{item.pet.breed}</label>
-                  <label className="mb-2">{item.pet.color}</label>
+                  <label className="text-sm mb-0 d-block">{item.pet.breed}</label>
+                  <label className="text-xsm mb-2">{item.pet.color}</label>
                 </main>
                 <aside className="w-25">
                   <label className="text-sm text-dark">{item.lost_datetime}</label>

@@ -22,30 +22,33 @@ async function callApi(endpoint, options = {}) {
 }
 
 const api = {
-    list(nombre) {
+    list(nameApi) {
       //return [];
       //throw new Error("Not found");
-      return callApi(`/${nombre}`);
+      return callApi(`/${nameApi}`);
     },
-    create(nombre,usuario) {
+    getById(nameApi,id){      
+      return callApi(`/${nameApi}/${id}`);
+    },
+    create(nameApi,usuario) {
       //throw new Error("500: Server error");
-      return callApi(`/${nombre}`, {
+      return callApi(`/${nameApi}`, {
         method: "POST",
         body: JSON.stringify(usuario)
       });
     },
-    read(nombre,id) {
-      return callApi(`/${nombre}/${id}`);
+    read(nameApi,id) {
+      return callApi(`/${nameApi}/${id}`);
     },
-    update(nombre,id,updates) {
-      return callApi(`/${nombre}/${id}`, {
+    update(nameApi,id,updates) {
+      return callApi(`/${nameApi}/${id}`, {
         method: "PUT",
         body: JSON.stringify(updates)
       });
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
-    remove(nombre,id) {
-      return callApi(`/${nombre}/${id}`, {
+    remove(nameApi,id) {
+      return callApi(`/${nameApi}/${id}`, {
         method: "DELETE"
       });
     }
