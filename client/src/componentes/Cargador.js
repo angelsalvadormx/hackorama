@@ -1,21 +1,12 @@
 import React, { Component } from "react";
+import "./cargador/cargador.css";
+import loader from './cargador/loader.gif';
 
-import "./styles/Loader.css";
-
-export default class Loader extends Component {
-  render() {
-    return (
-      <div className="lds-grid">
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-      </div>
-    );
-  }
-}
+const Cargador = ()=>{
+  return(
+    <section id="cargador" className="position-absolute w-100 h-100 bkg-img" style={{ backgroundImage: `url(${loader})` }}>
+      <h2 id="msgCargador" className="position-absolute w-100 text-center">Preparando todo.</h2>
+    </section>
+  );
+};
+export default Cargador;

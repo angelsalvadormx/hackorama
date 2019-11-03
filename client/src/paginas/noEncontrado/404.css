@@ -5,8 +5,5 @@
   background-size: 404px;
 }
 .msg404{
-  left: 50%;
   bottom: 115px;
-  transform: translateX(-50%);
-
 }

@@ -1,27 +1,30 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+//Test
+import Cargador from './componentes/Cargador';
+
 //  import Paginas
-import Principal from "./paginas/Principal";
-import InicioSesion from "./paginas/InicioSesion";
-import RecuperarCuenta from "./paginas/RecuperarCuenta";
-import Registro from "./paginas/Registro";
+import Mapa from './componentes/Mapa';
+import Perfil from "./paginas/Perfil";
 import Inicio from "./paginas/Inicio";
-import ComparacionMascotas from "./paginas/ComparacionMascotas";
-import Publicaciones from "./paginas/Publicaciones";
+import Registro from "./paginas/Registro";
+import Principal from "./paginas/Principal";
 import Publicacion from "./paginas/Publicacion";
+import NoEncontrada from "./paginas/NoEncontrada";
+import InicioSesion from "./paginas/InicioSesion";
+import Publicaciones from "./paginas/Publicaciones";
+import RecuperarCuenta from "./paginas/RecuperarCuenta";
+import ComparacionMascotas from "./paginas/ComparacionMascotas";
 import AgregarPublicacionMenu from "./paginas/AgregarPublicacionMenu";
 import AgregarPublicacionFormulario from "./paginas/AgregarPublicacionFormulario";
-import Perfil from "./paginas/Perfil";
-import NoEncontrada from "./paginas/NoEncontrada";
-import Mapa from './componentes/Mapa';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exac path="/mapa" component={Mapa} />
+        <Route exac path="/loader" component={Cargador} />
         <Route exac path="/index" component={Principal} />
         <Route exac path="/inicio-sesion" component={InicioSesion} />
         <Route exac path="/recuperar-cuenta" component={RecuperarCuenta} />
