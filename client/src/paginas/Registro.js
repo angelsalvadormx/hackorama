@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import CargandoPagina from "../componentes/CargandoPagina";
 import FormularioUsuario from "../componentes/FormularioUsuario";
 import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
+import api from "../api";
+import Cargador from "../componentes/Cargador";
 
 class Registro extends Component {
   state = {
@@ -31,6 +33,16 @@ class Registro extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     console.log(this.state.form);
+
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.users.create(this.state.form);
+      this.setState({ loading: false });
+      this.props.history.push("/inicio-sesion");
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
   };
 
   componentDidMount() {
@@ -38,7 +50,7 @@ class Registro extends Component {
   }
   render() {
     if (this.state.loading === true) {
-      return <CargandoPagina />;
+      return <Cargador msg="Creando cuenta" />;
     }
     return (
       <div className="container">

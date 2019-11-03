@@ -2,8 +2,8 @@ import React from "react";
 import "./cargador/cargador.css";
 import loader from "./cargador/loader.gif";
 
-const Cargador = ({msg}) => {
-  msg = msg == undefined ? '' : msg;
+const Cargador = ({ msg }) => {
+  msg = msg == undefined ? "" : msg;
   return (
     <section
       id="cargador"
