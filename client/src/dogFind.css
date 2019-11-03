@@ -3,10 +3,31 @@ body,
 #root {
   height: 100%;
 }
+
+/* Animacion de la clase active-menu*/
 .active-menu small,
 .active-menu {
+}
+.btn-menu{
+  color: #000;
+}
+.btn-menu i{
+  transform: scale(1);
+}
+.btn-menu,
+.btn-menu i{
+  transition: all .3s ease-in;
+}
+
+.btn-menu.active-menu i,
+.btn-menu.active-menu{
   color: #ff1a1a !important;
 }
+
+.btn-menu.active-menu i{
+  transform: scale(1.4);
+}
+
 .outline-none {
   outline: none !important;
 }
