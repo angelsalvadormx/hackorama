@@ -29,32 +29,33 @@ class RecuperarCuenta extends Component {
   render() {
     return (
       <div className="container h-100">
-        <div className="row h-100 d-flex flex-column">
+        <div className="row d-flex flex-column h-100">
           <EncabezadoPrincipal />
 
           <div className="d-flex flex-column align-items-center mt-5">
             <h5>Recuperar cuenta</h5>
-            <form className="col-11 col-lg-6" onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="col-11">
               <div className="form-group">
-                <div className="form-group">
-                  <label>
-                    Te enviaremos un enlace a tu correo para que puedas cambiar
-                    la contraseña
-                  </label>
-                </div>
+                <label>
+                  Te enviaremos un enlace a tu correo para que puedas cambiar la
+                  contraseña
+                </label>
+              </div>
+              <div className="form-group">
                 <input
                   type="email"
                   className="form-control"
                   name="correo"
-                  placeholder="Ingresa correo"
+                  placeholder="Ingresa el correo"
                   onChange={this.handleChange}
+                  required
                 />
               </div>
 
               <div className="form-group">
                 <button
                   onClick={this.handleClick}
-                  className="btn btn-secondary btn-block"
+                  className="btn btn-primary btn-block"
                 >
                   Enviar
                 </button>

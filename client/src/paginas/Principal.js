@@ -14,14 +14,14 @@ export default class Principal extends Component {
                 <div className="form-group">
                   <Link
                     to="/inicio-sesion"
-                    className="btn btn-secondary btn-block"
+                    className="btn btn-primary btn-block"
                   >
-                    Iniciar Sesion
+                    Iniciar sesión
                   </Link>
                 </div>
                 <div className="form-group">
-                  <Link to="/registro" className="btn btn-primary btn-block">
-                    Crear Cuenta
+                  <Link to="/registro" className="btn btn-secondary btn-block">
+                    Crear cuenta
                   </Link>
                 </div>
               </div>

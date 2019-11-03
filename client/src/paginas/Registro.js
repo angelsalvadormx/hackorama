@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import RegistroFormulario from "../componentes/RegistroFormulario";
 import CargandoPagina from "../componentes/CargandoPagina";
+import FormularioUsuario from "../componentes/FormularioUsuario";
 
 class Registro extends Component {
   state = {
@@ -48,10 +48,11 @@ class Registro extends Component {
             <h3 className="">Nombre App</h3>
             <h5 className="mt-5">Registrate</h5>
           </div>
-          <RegistroFormulario
+          <FormularioUsuario
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}
             formValues={this.state.form}
+            message="Registrarme"
           />
         </div>
       </div>
