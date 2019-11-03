@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Test
 import Cargador from "./componentes/Cargador";
@@ -22,9 +22,6 @@ import AgregarPublicacionFormulario from "./paginas/AgregarPublicacionFormulario
 import Inicio from "./paginas/Inicio";
 
 function App() {
-  const UsuarioLogeado = ({ children }) => {
-    return children({ autenticado: false });
-  };
   return (
     <BrowserRouter>
       <Switch>
@@ -46,18 +43,11 @@ function App() {
           path="/agregar-publicacion-menu"
           component={AgregarPublicacionMenu}
         />
+        <Route exac path="/inicio" component={Inicio} />
         <Route exac path="/perfil/:id" component={Perfil} />
-        <Route exac path="/" component={Principal} />
+        <Route exac path="/404" component={NoEncontrada} />
+        <Route exac path="/principal" component={Principal} />
         <Route component={NoEncontrada} />
-        <Contexto.Consumer>
-          {({ autenticado }) =>
-            autenticado ? (
-              <Route exac path="/inicio" component={Inicio} />
-            ) : (
-              <Route exac path="/inicio-sesion" component={Registro} />
-            )
-          }
-        </Contexto.Consumer>
       </Switch>
     </BrowserRouter>
   );

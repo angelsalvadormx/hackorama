@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Contexto from "../Contexto";
 
 import IniciarSesionFormulario from "../componentes/IniciarSesionFormulario";
 import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
@@ -27,6 +28,7 @@ class InicioSesion extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     console.log(this.state.form);
+    //Contexto.value.activateAuth;
   };
   render() {
     return (

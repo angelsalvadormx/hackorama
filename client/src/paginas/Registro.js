@@ -37,7 +37,7 @@ class Registro extends Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.users.create(this.state.form);
+      await api.create("user", this.state.form);
       this.setState({ loading: false });
       this.props.history.push("/inicio-sesion");
     } catch (error) {

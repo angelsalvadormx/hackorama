@@ -8,7 +8,7 @@ import Contexto from "./Contexto";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <Contexto.Provider value={{ autenticado: true }}>
+  <Contexto.Provider>
     <App />
   </Contexto.Provider>,
   document.getElementById("root")
