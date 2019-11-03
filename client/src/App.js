@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
 
 //Test
-import Cargador from './componentes/Cargador';
+import Cargador from "./componentes/Cargador";
+
+import Contexto from "./Contexto";
 
 //  import Paginas
-import Mapa from './componentes/Mapa';
+import Mapa from "./componentes/Mapa";
 import Perfil from "./paginas/Perfil";
 import Registro from "./paginas/Registro";
 import Principal from "./paginas/Principal";
@@ -17,8 +19,12 @@ import RecuperarCuenta from "./paginas/RecuperarCuenta";
 import ComparacionMascotas from "./paginas/ComparacionMascotas";
 import AgregarPublicacionMenu from "./paginas/AgregarPublicacionMenu";
 import AgregarPublicacionFormulario from "./paginas/AgregarPublicacionFormulario";
+import Inicio from "./paginas/Inicio";
 
 function App() {
+  const UsuarioLogeado = ({ children }) => {
+    return children({ autenticado: false });
+  };
   return (
     <BrowserRouter>
       <Switch>
@@ -43,6 +49,15 @@ function App() {
         <Route exac path="/perfil/:id" component={Perfil} />
         <Route exac path="/" component={Principal} />
         <Route component={NoEncontrada} />
+        <Contexto.Consumer>
+          {({ autenticado }) =>
+            autenticado ? (
+              <Route exac path="/inicio" component={Inicio} />
+            ) : (
+              <Route exac path="/inicio-sesion" component={Registro} />
+            )
+          }
+        </Contexto.Consumer>
       </Switch>
     </BrowserRouter>
   );
