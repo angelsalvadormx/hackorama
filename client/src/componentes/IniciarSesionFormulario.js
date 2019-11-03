@@ -9,7 +9,7 @@ const IniciarSesionFormulario = props => {
         <div className="form-group">
           <input
             type="email"
-            className="form-control"
+            className="form-control border shadow rounded"
             name="correo"
             placeholder="Ingresa correo"
             onChange={props.onChange}
@@ -19,7 +19,7 @@ const IniciarSesionFormulario = props => {
         <div className="form-group">
           <input
             type="password"
-            className="form-control"
+            className="form-control border shadow"
             name="contrasena"
             placeholder="Ingresa contraseña"
             onChange={props.onChange}

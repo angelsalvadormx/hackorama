@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
 
 class RecuperarCuenta extends Component {
@@ -28,7 +29,12 @@ class RecuperarCuenta extends Component {
 
   render() {
     return (
-      <div className="container h-100">
+      <div className="container">
+        <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
+          <Link to="/inicio-sesion">
+            <i className="text-dark fas fa-times"></i>
+          </Link>
+        </nav>
         <div className="row d-flex flex-column h-100">
           <EncabezadoPrincipal />
 
@@ -44,7 +50,7 @@ class RecuperarCuenta extends Component {
               <div className="form-group">
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control border shadow"
                   name="correo"
                   placeholder="Ingresa el correo"
                   onChange={this.handleChange}

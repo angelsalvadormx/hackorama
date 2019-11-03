@@ -8,7 +8,7 @@ const FormularioUsuario = props => {
       <div className="form-group">
         <input
           type="text"
-          className="form-control"
+          className="form-control border shadow"
           placeholder="Nombre"
           name="nombre"
           value={data.nombre}
@@ -19,7 +19,7 @@ const FormularioUsuario = props => {
       <div className="form-group">
         <input
           type="text"
-          className="form-control"
+          className="form-control border shadow"
           placeholder="Apellidos"
           name="apellidos"
           value={data.apellidos}
@@ -30,7 +30,7 @@ const FormularioUsuario = props => {
       <div className="form-group">
         <input
           type="email"
-          className="form-control"
+          className="form-control border shadow"
           placeholder="Correo"
           name="correo"
           value={data.correo}
@@ -41,7 +41,7 @@ const FormularioUsuario = props => {
       <div className="form-group">
         <input
           type="password"
-          className="form-control"
+          className="form-control border shadow"
           placeholder="Contraseña"
           name="contrasena"
           value={data.contrasena}
@@ -52,7 +52,7 @@ const FormularioUsuario = props => {
       <div className="form-group">
         <input
           type="number"
-          className="form-control"
+          className="form-control border shadow"
           placeholder="Telefono"
           name="telefono"
           value={data.telefono}
