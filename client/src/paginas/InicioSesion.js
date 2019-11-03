@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import IniciarSesionFormulario from "../componentes/IniciarSesionFormulario";
+import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
 
 class InicioSesion extends Component {
   state = {
@@ -27,13 +29,9 @@ class InicioSesion extends Component {
   };
   render() {
     return (
-      <div>
-        <div className="container h-100 bg-dar">
-          <div className="d-flex flex-column align-items-center">
-            <h1>Logo</h1>
-            <h3>Nombre App</h3>
-            <h5>Inicio de sesion</h5>
-          </div>
+      <div className="container h-100">
+        <div className="row d-flex flex-column h-100">
+          <EncabezadoPrincipal />
           <IniciarSesionFormulario
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}

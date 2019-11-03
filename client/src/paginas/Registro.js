@@ -41,12 +41,12 @@ class Registro extends Component {
       return <CargandoPagina />;
     }
     return (
-      <div>
+      <div className="pt-5">
         <div className="container h-100 bg-dar">
           <div className="d-flex flex-column align-items-center">
             <h1>Logo</h1>
             <h3 className="">Nombre App</h3>
-            <h5>Registrate</h5>
+            <h5 className="mt-5">Registrate</h5>
           </div>
           <RegistroFormulario
             onSubmit={this.handleSubmit}

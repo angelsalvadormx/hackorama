@@ -10,8 +10,9 @@ class IniciarSesionFormulario extends Component {
 
   render() {
     return (
-      <div className="row d-flex justify-content-center">
-        <form className="col-11 col-lg-6" onSubmit={this.props.onSubmit}>
+      <div className="d-flex flex-column align-items-center mt-4">
+        <h5 className="mt-5">Inicio de sesion</h5>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <input
               type="email"
@@ -38,7 +39,7 @@ class IniciarSesionFormulario extends Component {
               onClick={this.handleClick}
               className="btn btn-secondary btn-block"
             >
-              Iniciar sesion
+              Iniciar
             </button>
           </div>
         </form>

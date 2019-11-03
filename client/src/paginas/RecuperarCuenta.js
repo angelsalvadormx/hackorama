@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
 
 class RecuperarCuenta extends Component {
   state = {
@@ -27,31 +28,39 @@ class RecuperarCuenta extends Component {
 
   render() {
     return (
-      <div>
-        <div className="d-flex flex-column align-items-center">
-          <h5>Recuperar cuenta</h5>
-        </div>
+      <div className="container h-100">
+        <div className="row h-100 d-flex flex-column">
+          <EncabezadoPrincipal />
 
-        <div className="row d-flex justify-content-center">
-          <form className="col-11 col-lg-6" onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <input
-                type="email"
-                className="form-control"
-                name="correo"
-                placeholder="Ingresa correo"
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <button
-                onClick={this.handleClick}
-                className="btn btn-secondary btn-block"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
+          <div className="d-flex flex-column align-items-center mt-5">
+            <h5>Recuperar cuenta</h5>
+            <form className="col-11 col-lg-6" onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <div className="form-group">
+                  <label>
+                    Te enviaremos un enlace a tu correo para que puedas cambiar
+                    la contraseña
+                  </label>
+                </div>
+                <input
+                  type="email"
+                  className="form-control"
+                  name="correo"
+                  placeholder="Ingresa correo"
+                  onChange={this.handleChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <button
+                  onClick={this.handleClick}
+                  className="btn btn-secondary btn-block"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

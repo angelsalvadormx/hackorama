@@ -1,34 +1,34 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
+import EncabezadoPrincipal from "../componentes/EncabezadoPrincipal";
 
 export default class Principal extends Component {
   render() {
     return (
-      <div className="h-100 bg-dark">
-        <div className="container h-100 bg-success">
-          <div className="d-flex flex-column align-items-center h-70 bg-danger">
-            <h1>Logo</h1>
-            <h3>Nombre App</h3>
-          </div>
-          <div className="row d-flex justify-content-center">
-            <div className="col-12 col-lg-6">
-              <div className="form-group">
-                <Link
-                  to="/inicio-sesion"
-                  className="btn btn-secondary btn-block"
-                >
-                  Iniciar Sesion
-                </Link>
-              </div>
-              <div className="form-group">
-                <Link to="/registro" className="btn btn-grey btn-block">
-                  Crear Cuenta
-                </Link>
+      <Fragment>
+        <div className="container h-100">
+          <div className="row d-flex flex-column h-100">
+            <EncabezadoPrincipal />
+            <div className="d-flex align-items-end justify-content-center h-75">
+              <div className="col-12 col-lg-6">
+                <div className="form-group">
+                  <Link
+                    to="/inicio-sesion"
+                    className="btn btn-secondary btn-block"
+                  >
+                    Iniciar Sesion
+                  </Link>
+                </div>
+                <div className="form-group">
+                  <Link to="/registro" className="btn btn-primary btn-block">
+                    Crear Cuenta
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
