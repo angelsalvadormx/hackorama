@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import CargandoPagina from "../componentes/CargandoPagina";
 import FormularioUsuario from "../componentes/FormularioUsuario";
@@ -40,8 +41,13 @@ class Registro extends Component {
       return <CargandoPagina />;
     }
     return (
-      <div className="container h-100">
-        <div className="row d-flex flex-column h-100">
+      <div className="container">
+        <div className="row d-flex flex-column">
+          <nav className="pl-4 pr-4 pt-4 d-flex justify-content-end">
+            <Link to="/index">
+              <i className="text-dark fas fa-times"></i>
+            </Link>
+          </nav>
           <EncabezadoPrincipal />
 
           <div className="d-flex flex-column align-items-center mt-5">
