@@ -22,35 +22,33 @@ async function callApi(endpoint, options = {}) {
 }
 
 const api = {
-  users: {
-    list() {
+    list(nombre) {
       //return [];
       //throw new Error("Not found");
-      return callApi("/badges");
+      return callApi(`/${nombre}`);
     },
-    create(user) {
+    create(nombre,usuario) {
       //throw new Error("500: Server error");
-      return callApi(`/user`, {
+      return callApi(`/${nombre}`, {
         method: "POST",
-        body: JSON.stringify(user)
+        body: JSON.stringify(usuario)
       });
     },
-    read(badgeId) {
-      return callApi(`/badges/${badgeId}`);
+    read(nombre,id) {
+      return callApi(`/${nombre}/${id}`);
     },
-    update(badgeId, updates) {
-      return callApi(`/badges/${badgeId}`, {
+    update(nombre,id,updates) {
+      return callApi(`/${nombre}/${id}`, {
         method: "PUT",
         body: JSON.stringify(updates)
       });
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
-    remove(badgeId) {
-      return callApi(`/badges/${badgeId}`, {
+    remove(nombre,id) {
+      return callApi(`/${nombre}/${id}`, {
         method: "DELETE"
       });
     }
-  }
 };
 
 export default api;
