@@ -28,6 +28,7 @@ class InicioSesion extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     console.log(this.state.form);
+    this.props.history.push("/publicaciones");
     //Contexto.value.activateAuth;
   };
   render() {

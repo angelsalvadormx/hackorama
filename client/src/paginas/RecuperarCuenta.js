@@ -40,7 +40,7 @@ class RecuperarCuenta extends Component {
 
           <div className="d-flex flex-column align-items-center mt-5">
             <h5>Recuperar cuenta</h5>
-            <form onSubmit={this.handleSubmit} className="col-11">
+            <form onSubmit={this.handleSubmit} className="col-11 col-lg-6">
               <div className="form-group">
                 <label>
                   Te enviaremos un enlace a tu correo para que puedas cambiar la
